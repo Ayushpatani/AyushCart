@@ -2,16 +2,23 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+
   <parent>
-    <groupId>com.ayshcart</groupId>
-    <artifactId>ayushcart-app</artifactId>
+    <groupId>com.ayushcart</groupId>
+    <artifactId>ayushcart-root</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.ayushcart</groupId>
+
+  <!--  <groupId>com.ayushcart</groupId>-->
   <artifactId>ayushcart-app</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <!--  <version>1.0-SNAPSHOT</version>-->
+
   <name>ayushcart-app</name>
+
+  <packaging>jar</packaging>
+
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
