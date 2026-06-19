@@ -8,12 +8,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  */
 @SpringBootApplication
+class MyFirstSpringBootApp {
+
+}
+
 public class App 
 {
     public static void main( String[] args )
     {
         System.out.println("Writing my first spring boot program!!");
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(MyFirstSpringBootApp.class, args);
         System.out.println("Spring boot application started!!");
     }
 }
