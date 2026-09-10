@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ayushcart
+  profiles:
+    # "dev" uses an in-memory H2 database, so the app runs with zero setup.
+    # Start with --spring.profiles.active=mysql to use MySQL instead.
+    active: dev
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        # Loads lazy collections (e.g. order items) in batches instead of one query per row
+        default_batch_fetch_size: 20
+  data:
+    web:
+      pageable:
+        max-page-size: 50
+
+app:
+  jwt:
+    # Base64-encoded key of at least 256 bits. Override with the JWT_SECRET env variable in production!
+    secret: ${JWT_SECRET:QXl1c2hDYXJ0LWRldi1zZWNyZXQta2V5LWNoYW5nZS1tZS1pbi1wcm9kdWN0aW9uLTEyMzQ1Ng==}
+    expiration-ms: 86400000   # 24 hours
+  cors:
+    allowed-origins: http://localhost:5173
+  seed:
+    enabled: true
+    admin-email: admin@ayushcart.com
+    admin-password: Admin@123
